@@ -1,0 +1,15 @@
+---
+
+langauge: python
+python: "2.7"
+
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq python-apt
+
+install:
+  - sudo pip install ansible==2.0.1.0
+
+notifications:
+    webhooks: https://galaxy.ansible.com/api/v1/notifications/
+    email: false
