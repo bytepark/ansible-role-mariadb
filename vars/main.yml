@@ -1,0 +1,5 @@
+---
+mariadb_user: mariadb
+mariadb_password: mariadbpassword
+mariadb_root_password: rootpassword
+mariadb_database: mariadb
