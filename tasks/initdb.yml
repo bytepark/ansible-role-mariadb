@@ -1,0 +1,14 @@
+---
+- name: Ensure MySQL databases are present.
+  mysql_db:
+    name: "{{ mariadb_database }}"
+    login_user: "{{ mariadb_root_user }}"
+    login_password: "{{ mariadb_root_password }}"
+    state: present
+
+# - name: mariadb | Create databases
+#   mysql_db: name={{ mariadb_database }} state=present login_user=root login_password={{ mariadb_root_password }}
+
+# #- name: mariadb | Import dump
+# #  mysql_db: name={{ mariadb_database }} state=import login_user=root login_password={{ mariadb_root_password }} target=/vagrant/{{ mariadb.dump }}
+# #  when: mariadb.dump

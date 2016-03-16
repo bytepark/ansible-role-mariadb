@@ -1,0 +1,14 @@
+---
+- name: Ensure MySQL users are present.
+  mysql_user:
+    name: "{{ item.name }}"
+    host: "{{ item.host | default('localhost') }}"
+    password: "{{ item.password }}"
+    priv: "{{ item.priv | default('*.*:USAGE') }}"
+    state: present
+    append_privs: "{{ item.append_privs | default('no') }}"
+  with_items: "{{ mysql_users }}"
+
+
+# - name: mariadb | Create users
+#   mysql_user: name={{ mariadb_user }} password={{ mariadb_password }} priv={{ mariadb_database }}.*:ALL state=present login_user=root login_password={{ mariadb_root_password }}
