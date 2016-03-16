@@ -1,4 +1,4 @@
-mariadb
+Role Name
 =========
 
 Ansible role to install mariadb
@@ -6,19 +6,22 @@ Ansible role to install mariadb
 Requirements
 ------------
 
-No further requirements besides bash.
+No further requirements
 
 Role Variables
 --------------
 
-{{ mariadb.user }}
-{{ mariadb.root_password }}
-{{ mariadb.database }}
+Available variables are listed below, along with default values:
+
+	mariadb_user: mariadb
+	mariadb_password: mariadbpassword
+	mariadb_root_password: rootpassword
+	mariadb_database: mariadb
 
 Dependencies
 ------------
 
-No dependencies.
+No dependencies
 
 Example Playbook
 ----------------
@@ -26,6 +29,11 @@ Example Playbook
     - hosts: servers
       roles:
          - { role: bytepark.mariadb }
+      vars:
+      	mariadb_user: mariadb
+	  	mariadb_password: mariadbpassword
+		mariadb_root_password: rootpassword
+		mariadb_database: mariadb
 
 License
 -------
