@@ -23,6 +23,8 @@ install:
   - ansible --version
 
 script:
+  - echo localhost > inventory
+
   # Basic role syntax check
   - ansible-playbook tests/$PLAYBOOK -i tests/inventory --syntax-check
 
