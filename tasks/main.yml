@@ -7,3 +7,8 @@
 
 - include: config.yml
 - include: initdb.yml
+
+- name: ensure mariadb is started
+  service:
+    name: mysql
+    state: started
