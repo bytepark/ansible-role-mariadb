@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/bytepark/ansible-role-mariadb.svg?branch=master)](https://travis-ci.org/bytepark/ansible-role-mariadb)
+
 ansible-role-mariadb
 =========
 
