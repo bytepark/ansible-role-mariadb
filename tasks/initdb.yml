@@ -10,7 +10,7 @@
   mysql_db:
     name: "{{ item.name }}"
     collation: "{{ item.collation }}"
-    encoding: "{{ item.encoding }}""
+    encoding: "{{ item.encoding }}"
     state: present
   with_items: "{{ mysql_databases }}"
 
