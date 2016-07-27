@@ -15,8 +15,8 @@
   apt:
     name: "{{ item }}"
     update_cache: yes
+    state: installed
   with_items: 
-    - software-properties-common
     - mariadb-server
     - mariadb-client
     - python-mysqldb
