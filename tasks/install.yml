@@ -12,7 +12,7 @@
 
 - name: apt | Ensure packages are installed
   become: true
-  package:
+  apt:
     name: "{{ item }}"
     update_cache: yes
   with_items: 
