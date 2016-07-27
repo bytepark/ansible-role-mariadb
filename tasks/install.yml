@@ -3,7 +3,7 @@
   become: true
   apt_key:
     keyserver: keyserver.ubuntu.com
-    id: "0xcbcb082a1bb943db"
+    id: "0xF1656F24C74CD1D8"
 
 - name: apt | Ensure upstream repository is configured
   become: true
