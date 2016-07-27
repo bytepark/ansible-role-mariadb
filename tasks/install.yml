@@ -8,7 +8,7 @@
 - name: apt | Ensure upstream repository is configured
   become: true
   apt_repository:
-    repo: "deb [arch=amd64,i386] http://mirrors.n-ix.net/mariadb/repo/{{ mariadb_upstream_version }}/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} main"
+    repo: "deb [arch=amd64,i386,ppc64el] http://mirror.netcologne.de/mariadb/repo/10.1/ubuntu xenial main"
 
 - name: apt | Ensure packages are installed
   become: true
