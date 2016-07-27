@@ -14,7 +14,9 @@
   become: true
   package:
     name: "{{ item }}"
+    update_cache: yes
   with_items: 
+    - software-properties-common
     - mariadb-server
     - mariadb-client
     - python-mysqldb
